@@ -55,7 +55,7 @@ movie_names = list(final["title"])
 st_lottie(heading, height=300)
 st.subheader("Recommending Best Movies For You :tada:")
 st.write("---")
-left_col,right_col = st.beta_columns(2)
+left_col,right_col = st.columns(2)
 with left_col:
     selected_name = st.selectbox("Select The Movie:",movie_names)
     with right_col:
@@ -66,7 +66,7 @@ if st.button("Recommend Me"):
     names,posters = Recommend(selected_name)
     st.write("---")
     st.subheader(f"As you have watched {selected_name}: ")
-    left_col, middle_col,right_col = st.beta_columns(3)
+    left_col, middle_col,right_col = st.columns(3)
     with left_col:
         st.write(names[0])
         st.image(posters[0],width=180)
